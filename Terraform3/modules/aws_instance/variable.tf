@@ -1,6 +1,9 @@
 variable "instance_name" {
-  type = string
-  default = "Prod_Server"
+  type = map(any)
+  default = {
+    Name = "Prod_Server"
+  } 
+  
 }
 variable "instance_ami" {
   type = string
