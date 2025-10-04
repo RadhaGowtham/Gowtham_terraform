@@ -1,10 +1,9 @@
-
 resource "aws_instance" "jenkins" {
-  ami           = "ami-0360c520857e3138f"
-  instance_type = "t2.micro"
-  key_name      = "devops@2025"
+  ami           = var.ami
+  instance_type = var.instance_type
+  key_name      = var.key_name
 
   tags = {
-    Name = "jenkins_server"
+    Name = var.tag
   }
 }
