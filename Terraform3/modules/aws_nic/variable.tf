@@ -2,8 +2,10 @@ variable "subnet_id" {
   type = string
 }
 variable "nic_name" {
-  type = string
-  default = "mynic"
+  type = map(any)
+  default = {
+    Name = "mynic"
+  }
 }
 variable "private_ips" {
 type = list(string)
