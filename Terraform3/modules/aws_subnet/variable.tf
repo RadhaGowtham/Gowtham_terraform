@@ -5,8 +5,7 @@ variable "subnet_cidr" {
 }
 variable "subnet_name" {
   type = string
-  default  = "tf-example"
-  } 
+  default  = "tf-example" 
 }
 variable "vpc_id" {
   type = string
