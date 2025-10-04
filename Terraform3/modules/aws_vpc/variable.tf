@@ -4,6 +4,9 @@ variable "vpc_cidr" {
   
 }
 variable "vpc_tag" {
-  type = string
-  default = "vpc-example"
+    type = map(any)
+    default = {
+      "Name" = "tf-example"
+    }
+  
 }
