@@ -46,18 +46,3 @@ variable "instance_type" {
   default = "t2.micro"
 }
 
-// creating mutiple resources
-# step1:
-# create a variable as below
-#variable "instance_config" {
-  # type = map(any)
-#}
-
-
-
-
-
-
-  
-
-}
