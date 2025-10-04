@@ -4,8 +4,10 @@ variable "subnet_cidr" {
   
 }
 variable "subnet_name" {
-  type = string
-  default  = "tf-example" 
+  type = map(any)
+  default = {
+    Name = "tf-example"
+  } 
 }
 variable "vpc_id" {
   type = string
