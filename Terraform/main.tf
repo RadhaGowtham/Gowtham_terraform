@@ -1,6 +1,6 @@
 
 resource "aws_s3_bucket" "s3_bucket" {
-  bucket = "terraform-state-v1"  # Make sure this name is globally unique!
+  bucket = "terraform-state-rrg"  # Make sure this name is globally unique!
 
   versioning {
     enabled = true
