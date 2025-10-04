@@ -4,8 +4,10 @@ variable "vpc_cidr" {
   
 }
 variable "vpc_tag" {
-    type = string
-    default = "tf-example"
+    type = map(any)
+    default = {
+      Name = "tf-example"
+    }
   
 }
 variable "subnet_cidr" {
@@ -14,26 +16,34 @@ variable "subnet_cidr" {
   
 }
 variable "subnet_name" {
-  type = string
-  default = "tf-example"
+  type = map(any)
+  default = {
+    Name = "tf-example"
+  } 
 }
 
 variable "sg_name" {
-  type = string
-  default = "allow_tls"
+  type = map(any)
+  default = {
+    Name = "allow_tls"
+  }
 }
 
 variable "nic_name" {
-  type = string
-  default = "mynic"
+  type = map(any)
+  default = {
+    Name = "mynic"
+  }
 }
 variable "private_ips" {
 type = list(string)
   default = ["172.16.10.100"]
 }
 variable "instance_name" {
-  type = string
-  default = "Prod_Server"
+  type = map(any)
+  default = {
+    Name = "Prod_Server"
+  } 
   
 }
 variable "instance_ami" {
@@ -46,3 +56,11 @@ variable "instance_type" {
   default = "t2.micro"
 }
 
+// creating mutiple resources
+# step1:
+# create a variable as below
+
+variable "instance_config" {
+  type = map(any)
+
+}
