@@ -3,6 +3,8 @@ variable "vpc_id" {
   
 }
 variable "sg_name" {
-  type = string
-  default = "allow_tls"
+  type = map(any)
+  default = {
+    Name = "allow_tls"
+  }
 }
